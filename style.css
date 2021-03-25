@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(229, 57%, 11%);
+  font-family: "Raleway", sans-serif;
+}
+
+.background {
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+}
+
+.face {
+    background-color: hsl(228, 56%, 26%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.face1 {
+  border-top-right-radius: 80px;
+  padding: 30px;
+  width: 310px;
+  height: 180px;
+}
+
+.face1 .logo,
+.icons {
+    margin-left: 10px;
+}
+
+.logo {
+   width: 120px;
+   margin-top: 10px;
+}
+
+.icons img {
+    background-color: hsl(229, 57%, 11%);
+    padding: 10px;
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+.icons img:not(:nth-child(3)) {
+    margin-right: 10px;
+}
+
+.face2 {
+    width: 500px;
+    align-self: flex-end;
+}
+
+.progress-bar {
+    background-color: hsl(229, 57%, 18%);
+    padding: 2px;
+    border-radius: 50px;
+    margin: 10px auto 5px auto;
+}
+
+.bar {
+    background-image: linear-gradient(
+      to right,
+      hsl(6, 100%, 80%),
+      hsl(335, 100%, 65%)
+    );
+    padding: 6px;
+    width: 70%;
+    border-radius: 50px;
+}
+
+.bar-circle {
+    background: #fff;
+    padding: 5px;
+    width: 5px;
+    border-radius: 50%;
+    float: right;
+    margin-top: -4.4px;
+    margin-right: -4.5px;
+}
+
+p {
+    color: hsl(229, 7%, 65%);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.strong {
+    font-weight: 700;
+    color: hsl(229, 7%, 85%);
+    font-size: 1rem;
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}
+
+.label {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    background-image: url("./images/comment.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+    font-weight: 700;
+    display: flex;
+}
+
+.label span {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    margin-right: 5px;
+    margin-left: 5px;
+    bottom: 0.7rem;
+    position: relative;
+}
+
+.label p {
+    font-weight: bold;
+    bottom: 0.7rem;
+    position: relative;
+    top: 0.5rem;
+    font-size: 0.6rem;
+    letter-spacing: 1.2px;
+}
+
+footer {
+    bottom: 1rem;
+    position: absolute;
+    left: 40%;
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 60%;
+    }
+    body {
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .background {
+        display: none;
+      }
+    .face {
+        width: 100%;
+      }
+      .label {
+        top: 19rem;
+        right: 35%;
+        background: none;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 15px;
+      }
+      .label p {
+        margin-top: 10px;
+      }
+      .label span {
+          margin-top: 10px;
+          margin-right: 10px;
+      }
+      footer {
+        left: 30%;
+      }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background: url("./images/bg-mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .background {
+      display: none;
+    }
+    .label {
+      right: 30%;
+    }
+    .label span {
+      font-size: 30px;
+    }
+    main {
+        width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    main {
+      width: 85%;
+    }
+    footer {
+        display: none;
+    }
+    body {
+        background: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .background {
+        display: block;
+    }
+  }
+
+  @media screen and (width: 320px) {
+      .label {
+          top: 20.3rem;
+          right: 25%;
+      }
+  }
+  
+
